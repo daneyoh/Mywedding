@@ -277,7 +277,7 @@ const Preview: React.FC<{ data: InvitationData, isStandalone?: boolean }> = ({ d
               안양시 동안구 관양동 791-10<br/>
               빌라드지디 안양 제2주차장<br/>
               주차 후 셔틀버스 탑승 (5분거리)<br/><br/>
-              <span className="font-bold text-zinc-400 mt-1 block bg-rose-50 p-3 rounded-lg">
+              <span className="text-[18px]  text-zinc-500 mt-1 block bg-rose-50 p-3 serif  font-light serif italic hangul rounded-lg">
                 일반 하객분들은 빌라드지디 안양 <br/>
                 제2주차장을 이용 부탁드립니다.</span>
             </p>
@@ -324,7 +324,7 @@ const Preview: React.FC<{ data: InvitationData, isStandalone?: boolean }> = ({ d
           ))}
         </div>
       </section>
-      {/* ★ [추가된 섹션] 연락하기 (Contact) ★ */}
+      {/* ★ [추가된 섹션] 연락하기 ( ) ★ */}
       <section className="pb-24 px-8">
         <div className="bg-zinc-50 rounded-2xl p-6 space-y-8 border border-zinc-100">
           <div className="text-[11px] tracking-[0.4em] text-center uppercase font-bold text-rose-300 mb-2">Contact</div>
