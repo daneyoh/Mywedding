@@ -215,11 +215,11 @@ const Preview: React.FC<{ data: InvitationData, isStandalone?: boolean }> = ({ d
 
         {/* 내비게이션 버튼 (카카오/네이버) */}
         <div className="flex justify-center gap-12 mb-20">
-          <button onClick={() => window.open(`https://map.kakao.com/link/search/${data.address}`)} className="flex flex-col items-center gap-2">
+          <button onClick={() => window.open(`https://map.kakao.com/link/search/${data.location}`)} className="flex flex-col items-center gap-2">
             <div className="w-14 h-14 bg-[#FAE100] rounded-2xl flex items-center justify-center text-zinc-900"><Navigation size={24} fill="currentColor" /></div>
             <span className="text-[14px] font-bold text-zinc-500">카카오 지도</span>
           </button>
-          <button onClick={() => window.open(`https://map.naver.com/v5/search/${data.address}`)} className="flex flex-col items-center gap-2">
+          <button onClick={() => window.open(`https://map.naver.com/v5/search/${data.location}`)} className="flex flex-col items-center gap-2">
             <div className="w-14 h-14 bg-[#2DB400] rounded-2xl flex items-center justify-center text-white"><Navigation size={24} fill="white" /></div>
             <span className="text-[14px] font-bold text-zinc-500">네이버 지도</span>
           </button>
