@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { InvitationData } from '../types';
+import { InvitationData } from '../types'; 
+import { Phone, MessageCircle } from 'lucide-react';
 import { 
   Copy, Navigation, Bus, Car, MapPin, Youtube, 
   ChevronDown, ChevronUp, ChevronLeft, ChevronRight, Share2, Heart, X 
@@ -224,12 +225,11 @@ const Preview: React.FC<{ data: InvitationData, isStandalone?: boolean }> = ({ d
         </div>
 
         {/* 상세 교통 안내 텍스트 */}
-        <div className="text-left space-y-10 border-t border-zinc-100 pt-16 px-2">
+        <div className="text-left space-y-7 border-t border-zinc-100 pt-16 px-2">
           <div className="space-y-3">
-            <p className="text-sm font-bold text-zinc-1200 flex items-center gap-2"><Bus size={16} className="text-rose-400"/> 버스 안내</p>
-            <p className="text-[18px] text-zinc-700 leading-relaxed pl-6">4호선 인덕원역 8번 출구 (셔틀버스 수시 운행)</p>
-            <p className="text-[17px] text-rose-500 leading-relaxed pl-10">웨딩홀 셔틀버스를 이용 추천드립니다. 
-            </p>
+            <p className="text-sm font-bold text-zinc-800 flex items-center gap-2"><Bus size={16} className="text-rose-400"/> 버스 안내</p>
+            <p className="text-[18px] text-zinc-700 leading-relaxed pl-6">4호선 인덕원역 8번 출구 (셔틀버스 수시 운행)</p> 
+            <p className="text-[18px] text-rose-500 leading-relaxed pl-6 -mt-6">웨딩홀 셔틀버스를 이용 추천드립니다.</p>
             </div>
           <div className="space-y-3">
              
@@ -286,7 +286,30 @@ const Preview: React.FC<{ data: InvitationData, isStandalone?: boolean }> = ({ d
           ))}
         </div>
       </section>
+      {/* ★ [추가된 섹션] 연락하기 (Contact) ★ */}
+      <section className="pb-24 px-8">
+        <div className="bg-zinc-50 rounded-2xl p-6 space-y-4 border border-zinc-100">
+          <div className="text-[11px] tracking-[0.2em] text-center uppercase font-bold text-rose-300 mb-2">Contact</div>
+          
+          {/* 신랑측 연락처 */}
+          <div className="flex items-center justify-between pb-4 border-b border-zinc-200/50">
+            <span className="text-sm text-zinc-600">신랑 <span className="font-bold text-zinc-800 ml-1">{data.groomName}</span></span>
+            <div className="flex gap-2">
+              <a href={`tel:${data.groomPhone}`} className="w-9 h-9 rounded-full bg-white border border-rose-100 text-rose-400 flex items-center justify-center hover:bg-rose-50 transition-colors"><Phone size={16} /></a>
+              <a href={`sms:${data.groomPhone}`} className="w-9 h-9 rounded-full bg-white border border-rose-100 text-rose-400 flex items-center justify-center hover:bg-rose-50 transition-colors"><MessageCircle size={16} /></a>
+            </div>
+          </div>
 
+          {/* 신부측 연락처 */}
+          <div className="flex items-center justify-between pt-1">
+            <span className="text-sm text-zinc-600">신부 <span className="font-bold text-zinc-800 ml-1">{data.brideName}</span></span>
+            <div className="flex gap-2">
+              <a href={`tel:${data.bridePhone}`} className="w-9 h-9 rounded-full bg-white border border-rose-100 text-rose-400 flex items-center justify-center hover:bg-rose-50 transition-colors"><Phone size={16} /></a>
+              <a href={`sms:${data.bridePhone}`} className="w-9 h-9 rounded-full bg-white border border-rose-100 text-rose-400 flex items-center justify-center hover:bg-rose-50 transition-colors"><MessageCircle size={16} /></a>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* ----------------------------------------------------------------
          [Section 6] 공유하기 (Share)
          - 카카오톡 공유 (모바일 지원 시) 또는 링크 복사

@@ -12,6 +12,8 @@ const App: React.FC = () => {
   const [data] = useState<InvitationData>({
     groomName: '동훈',
     brideName: '정은',
+    groomPhone: '010-5227-0696', 
+    bridePhone: '010-9383-9912',
     groomParents: '오일교 · 박선희',
     brideParents: '심창용 · 임미혜',
     date: '2026.03.28',
