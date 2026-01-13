@@ -3,29 +3,48 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="/favicon.ico" />
+
+    <!-- Mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#000000" />
-    <meta name="description" content="모바일 청첩장" />
+    <meta name="description" content="동훈 ♡ 정은 모바일 청첩장" />
+
+    <!-- PWA -->
     <link rel="apple-touch-icon" href="/logo192.png" />
     <link rel="manifest" href="/manifest.json" />
 
+    <!-- Open Graph (Kakao / SNS) -->
     <meta property="og:title" content="동훈 ♡ 정은 결혼식에 초대합니다" />
-    <meta property="og:description" content="2026.03.28 토요일 오후 3:30 | 빌라드지디 안양 3층" />
-    
-    <meta property="og:image" content="https://mywedding-3iy3.vercel.app/thumbnail.jpg?v=5" />
+    <meta
+      property="og:description"
+      content="2026.03.28 토요일 오후 3:30 | 빌라드지디 안양 3층"
+    />
+
+    <!-- ★ 중요: 실제 이미지 크기 = 1200 x 630 -->
+    <meta
+      property="og:image"
+      content="https://mywedding-3iy3.vercel.app/thumbnail.jpg?v=8"
+    />
     <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="400" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:type" content="image/jpeg" />
+
     <meta property="og:url" content="https://mywedding-3iy3.vercel.app" />
     <meta property="og:type" content="website" />
 
+    <!-- Twitter (겸용) -->
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <title>동훈 ♡ 정은 결혼식에 초대합니다</title>
   </head>
+
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <noscript>JavaScript를 활성화해주세요.</noscript>
     <div id="root"></div>
-    
+
     <script type="module" src="/src/index.tsx"></script>
   </body>
 </html>
