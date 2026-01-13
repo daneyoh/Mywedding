@@ -35,14 +35,14 @@ const App: React.FC = () => {
     locationImages: [],
     accounts: {
       groom: [
-        { name: "오동훈", bank: "신한은행", number: "110410178356" },
         { name: "오일교 (부)", bank: "국민은행", number: "62510201205986" },
         { name: "박선희 (모)", bank: "우체국", number: "10465302183931" },
+        { name: "오동훈", bank: "신한은행", number: "110410178356" },
       ],
       bride: [
-        { name: "심정은", bank: "국민은행", number: "50160201278543" },
         { name: "심창용 (부)", bank: "국민은행", number: "58500204065137" },
         { name: "임미혜 (모)", bank: "국민은행", number: "78720204255835" },
+        { name: "심정은", bank: "국민은행", number: "50160201278543" },
       ]
     }
   });
