@@ -17,7 +17,7 @@ const PetalEffect: React.FC = () => {
        overflow-hidden: 화면 밖으로 나간 꽃잎 가리기 
        z-20: 배경보다는 위, 텍스트보다는 아래에 배치 */
     <div className="absolute inset-0 pointer-events-none overflow-hidden z-20">
-      {[...Array(15)].map((_, i) => (
+      {[...Array(20)].map((_, i) => (
         <div 
           key={i} 
           className="petal absolute opacity-0"
@@ -38,8 +38,9 @@ const PetalEffect: React.FC = () => {
         @keyframes fall {
           0% { opacity: 0; transform: translate(0, 0) rotate(0deg); }
           15% { opacity: 0.6; }
-          85% { opacity: 0.6; }
-          100% { opacity: 0; transform: translate(${Math.random() * 100 - 50}px, 100vh) rotate(720deg); }
+          85% { opacity: 0.6; } 
+          5% { opacity: 0.6; } 
+          100% { opacity: 0; transform: translate(${Math.random() * 100 - 50}px, calc(100vh - 30px)) rotate(720deg); }
         }
       `}</style>
     </div>
@@ -104,7 +105,7 @@ const Preview: React.FC<{ data: InvitationData, isStandalone?: boolean }> = ({ d
       {/* ----------------------------------------------------------------
          [Section 2] 인사말 (Invitation Message)
          ---------------------------------------------------------------- */}
-      <section className="py-24 px-8 text-center space-y-8 bg-white">
+      <section className="py-16 px-8 text-center space-y-8 bg-white">
         {/* 장식용 세로선 */}
         <div className="w-px h-10 bg-rose-200 mx-auto"></div>
         <p className="whitespace-pre-wrap leading-[2.2] text-zinc-600 font-light text-[15px]">
@@ -195,7 +196,7 @@ const Preview: React.FC<{ data: InvitationData, isStandalone?: boolean }> = ({ d
          [Section 4] 오시는 길 (Location)
          - 지도 이미지, 내비게이션 버튼, 교통편 안내 텍스트
          ---------------------------------------------------------------- */}
-      <section className="pt-24 pb-8 px-8 bg-white text-center border-t border-zinc-100">
+      <section className="pt-16 pb-8 px-8 bg-white text-center border-t border-zinc-100">
         <h2 className="serif text-3xl font-light tracking-[0.2em] mb-12 text-stone-400 uppercase italic">Location</h2>
         
         {/* 장소 및 주소 정보 */}
@@ -255,7 +256,7 @@ const Preview: React.FC<{ data: InvitationData, isStandalone?: boolean }> = ({ d
          [Section 5] 마음 전하실 곳 (Accounts)
          - 아코디언 방식으로 계좌번호 표시 및 복사 기능
          ---------------------------------------------------------------- */}
-      <section className="py-24 px-10 bg-zinc-50">
+      <section className="py-16 px-10 bg-zinc-50">
         <div className="text-[11px] tracking-[0.4em] mb-12 text-center uppercase font-black text-stone-300">Gift</div>
         <div className="space-y-3">
           {['groom', 'bride'].map((side) => (
@@ -290,7 +291,7 @@ const Preview: React.FC<{ data: InvitationData, isStandalone?: boolean }> = ({ d
          [Section 6] 공유하기 (Share)
          - 카카오톡 공유 (모바일 지원 시) 또는 링크 복사
          ---------------------------------------------------------------- */}
-      <section className="pt-8 pb-32 px-10 text-center">
+      <section className="pt-8 pb-24 px-10 text-center">
         <button 
           onClick={() => navigator.share ? navigator.share({title: `${data.groomName} ♡ ${data.brideName}`, url: window.location.href}) : copyToClipboard(window.location.href)}
           className="w-full py-5 bg-[#FAE100] text-zinc-800 rounded-2xl font-bold flex items-center justify-center gap-3 shadow-sm active:scale-95 transition-transform"
