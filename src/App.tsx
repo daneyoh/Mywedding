@@ -23,7 +23,8 @@ const App: React.FC = () => {
     address: '경기 안양시 동안구 관악대로 254',
     address_kor: '빌라드지디 안양',
     address_parking: '안양시 동안구 관양동 791-10 빌라드지디 안양 제2주차장',
-    welcomeMessage: '서로를 아끼고 사랑하며 행복하게 살겠습니다.\n저희의 첫 시작을 함께 축복해 주세요.',
+    welcomeMessage: '사랑하는 분들의 아낌없는 응원과 격려 속에서\n 오늘의 저희가 있을 수 있었습니다. 이제 저희는 하나가 되어 새로운 가정을 이루는 아름다운 날을 맞이합니다. \n그 소중하고 뜻깊은 자리에 꼭 함께해 주시어\n저희의 출발을 지켜봐 주시면 감사하겠습니다.',
+ 
     templateId: 'luxury',
     parkingGuideEnabled: true,
     audioUrl: '/bgm.mp3', // 배경음악 파일 경로

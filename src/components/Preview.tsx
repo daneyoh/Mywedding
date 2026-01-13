@@ -217,11 +217,11 @@ const Preview: React.FC<{ data: InvitationData, isStandalone?: boolean }> = ({ d
         <div className="flex justify-center gap-12 mb-20">
           <button onClick={() => window.open(`https://map.kakao.com/link/search/${data.address}`)} className="flex flex-col items-center gap-2">
             <div className="w-14 h-14 bg-[#FAE100] rounded-2xl flex items-center justify-center text-zinc-900"><Navigation size={24} fill="currentColor" /></div>
-            <span className="text-[11px] font-bold text-zinc-500">카카오 지도</span>
+            <span className="text-[14px] font-bold text-zinc-500">카카오 지도</span>
           </button>
           <button onClick={() => window.open(`https://map.naver.com/v5/search/${data.address}`)} className="flex flex-col items-center gap-2">
             <div className="w-14 h-14 bg-[#2DB400] rounded-2xl flex items-center justify-center text-white"><Navigation size={24} fill="white" /></div>
-            <span className="text-[11px] font-bold text-zinc-500">네이버 지도</span>
+            <span className="text-[14px] font-bold text-zinc-500">네이버 지도</span>
           </button>
         </div>
 
@@ -300,7 +300,7 @@ const Preview: React.FC<{ data: InvitationData, isStandalone?: boolean }> = ({ d
           {['groom', 'bride'].map((side) => (
             <div key={side} className="bg-white border border-zinc-100 rounded-2xl overflow-hidden shadow-sm">
               <button onClick={() => setOpenAccordion(openAccordion === side ? null : side)} className="w-full px-8 py-6 flex justify-between items-center text-[14px] font-bold text-zinc-700">
-                {side === 'groom' ? '신랑측' : '신부측'} 마음 전하실 곳
+                {side === 'groom' ? '신랑' : '신부'} 측 계좌번호
                 {openAccordion === side ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
               </button>
               {/* 아코디언 내용 */}
@@ -326,8 +326,8 @@ const Preview: React.FC<{ data: InvitationData, isStandalone?: boolean }> = ({ d
       </section>
       {/* ★ [추가된 섹션] 연락하기 (Contact) ★ */}
       <section className="pb-24 px-8">
-        <div className="bg-zinc-50 rounded-2xl p-6 space-y-4 border border-zinc-100">
-          <div className="text-[11px] tracking-[0.2em] text-center uppercase font-bold text-rose-300 mb-2">Contact</div>
+        <div className="bg-zinc-50 rounded-2xl p-6 space-y-8 border border-zinc-100">
+          <div className="text-[11px] tracking-[0.4em] text-center uppercase font-bold text-rose-300 mb-2">Contact</div>
           
           {/* 신랑측 연락처 */}
           <div className="flex items-center justify-between pb-4 border-b border-zinc-200/50">
@@ -359,9 +359,9 @@ const Preview: React.FC<{ data: InvitationData, isStandalone?: boolean }> = ({ d
         >
           <Share2 size={18} /> 카카오톡으로 청첩장 공유
         </button>
-        <div className="mt-20 opacity-10 flex flex-col items-center gap-2">
+        <div className="mt-20 opacity-25 flex flex-col items-center gap-3">
           <Heart size={16} className="text-rose-500 fill-rose-500" />
-          <p className="text-[15px] font-black uppercase tracking-[0.4em]">감사합니다.<br/> 행복하게 잘 살겠습니다.<br/> 오동훈 심정은 올림.</p>
+          <p className="text-[15px] font-black uppercase tracking-[0.4em]">감사합니다.<br/> 행복하게 잘 살겠습니다.<br/> 오동훈♥심정은<br/> 올림</p>
         </div>
       </section>
       
