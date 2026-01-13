@@ -277,7 +277,7 @@ const Preview: React.FC<{ data: InvitationData, isStandalone?: boolean }> = ({ d
               안양시 동안구 관양동 791-10<br/>
               빌라드지디 안양 제2주차장<br/>
               주차 후 셔틀버스 탑승 (5분거리)<br/><br/>
-              <span className="font-bold text-zinc-800 mt-1 block bg-rose-50 p-3 rounded-lg">
+              <span className="font-bold text-zinc-400 mt-1 block bg-rose-50 p-3 rounded-lg">
                 일반 하객분들은 빌라드지디 안양 <br/>
                 제2주차장을 이용 부탁드립니다.</span>
             </p>
