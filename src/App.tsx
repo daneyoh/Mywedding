@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { InvitationData } from './types';
 import Preview from './components/Preview';
 import { Volume2, VolumeX } from 'lucide-react';
@@ -99,6 +100,9 @@ const App: React.FC = () => {
       >
         {isPlaying ? <Volume2 size={24} /> : <VolumeX size={24} />}
       </button>
+
+      {/* [Vercel Speed Insights] 성능 분석 통합 */}
+      <SpeedInsights />
 
     </div>
   );
