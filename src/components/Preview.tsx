@@ -123,22 +123,23 @@ const Preview: React.FC<{ data: InvitationData, isStandalone?: boolean }> = ({ d
          [Section 3] 갤러리 (Gallery)
          - 3열 그리드 + 클릭 시 확대(라이트박스)
          ---------------------------------------------------------------- */}
-      <section className="py-24 px-4 bg-zinc-50/50">
+     <section className="py-24 px-4 bg-zinc-50/50">
         <div className="text-[11px] tracking-[0.4em] mb-12 text-center uppercase font-black text-stone-300">Gallery</div>
         <div className="grid grid-cols-3 gap-1">
-          {/* 1번부터 22번까지 총 22장 이미지 렌더링 */}
-          {[...Array(22)].map((_, i) => (
+          {/* ▼▼▼ [수정] 숫자를 실제 사진 개수(예: 21)로 변경하세요 ▼▼▼ */}
+          {[...Array(21)].map((_, i) => (
             <div 
               key={i+1} 
               className="aspect-square bg-stone-100 overflow-hidden cursor-pointer"
-              onClick={() => setLightboxIndex(i)} // 클릭 시 해당 인덱스로 라이트박스 오픈
+              onClick={() => setLightboxIndex(i)} 
             >
               <img 
                 src={`/Gallery ${i+1}.jpg`} 
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" 
                 alt={`Gallery ${i+1}`} 
-                onError={(e) => { e.currentTarget.src = `/Gallery ${i+1} .jpg`; }} // 파일명 공백 예외처리
-              />              git config --global core.safecrlf false              git config --global core.autocrlf true
+                // 아래 코드는 파일명 뒤에 실수로 공백이 들어간 경우를 대비한 보험입니다
+                onError={(e) => { e.currentTarget.style.display = 'none'; }} 
+              />
             </div>
           ))}
         </div>
