@@ -138,7 +138,8 @@ const Preview: React.FC<{ data: InvitationData, isStandalone?: boolean }> = ({ d
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" 
                 alt={`Gallery ${i+1}`} 
                 // 아래 코드는 파일명 뒤에 실수로 공백이 들어간 경우를 대비한 보험입니다
-                onError={(e) => { e.currentTarget.style.display = 'none'; }} 
+                onError={(e) => { e.currentTarget.style.display = 'none'; }}  
+                
               />
             </div>
           ))}
