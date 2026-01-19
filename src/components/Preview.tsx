@@ -138,7 +138,7 @@ const Preview: React.FC<{ data: InvitationData, isStandalone?: boolean }> = ({ d
                 className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" 
                 alt={`Gallery ${i+1}`} 
                 onError={(e) => { e.currentTarget.src = `/Gallery ${i+1} .jpg`; }} // 파일명 공백 예외처리
-              />
+              />              git config --global core.safecrlf false              git config --global core.autocrlf true
             </div>
           ))}
         </div>
