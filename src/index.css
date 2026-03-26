@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+@font-face {
+  font-family: 'Adelio';
+  src: url('/Adelio.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Tailwind 클래스 대신 일반 CSS 클래스로 만듭니다 */
+.custom-font-title {
+  font-family: 'Adelio', 'Playfair Display', serif !important; /* !important로 강제 적용 */
+}
+
+/* 유틸리티 클래스 추가 */
+.font-adelio {
+  font-family: 'Adelio', serif;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Noto Sans KR', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.serif { font-family: 'Playfair Display', serif; }
+
+/* 스크롤바 숨기기 */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* AI Studio 스타일: 입체적인 꽃잎 낙하 */
+@keyframes flutter {
+  0% { transform: translate(0, -10px) rotate(0deg); opacity: 0; }
+  15% { opacity: 0.7; }
+  100% { transform: translate(100px, 90vh) rotate(360deg); opacity: 0; }
+}
+
+@keyframes sway {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(50px); }
+}
+
+.petal-container {
+  position: absolute;
+  top: -5%;
+  animation: flutter linear infinite;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.petal-wing {
+  display: block;
+  animation: sway ease-in-out infinite;
+}
+
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+}
+
+{
+  "css.lint.unknownAtRules": "ignore"
+}
